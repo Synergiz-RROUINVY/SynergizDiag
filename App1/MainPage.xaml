@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="SynergizDiag.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SynergizDiag"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" VerticalAlignment="Stretch" Height="1500">
+    <Grid>
+        <StackPanel x:Name="Content">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="BtnSearch" Content="Search" Click="BtnSearch_Click"/>
+                <ToggleSwitch x:Name="TgSwConnection"  OffContent="USB" OnContent="Wifi" FontSize="30" HorizontalAlignment="Stretch" IsOn="True" Toggled="TgSwConnection_Toggled" Grid.Column="1"  VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <TextBox Grid.Column="2" x:Name="TxBxAdress" PlaceholderText="IP Adress"  FontSize="30" Text="192.168.1.50" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="BtnPloufIntern" Content="Intern Class" HorizontalAlignment="Stretch"  FontSize="30" Click="BtnPlouf_ClickAsync"/>
+                <Button Grid.Column="1" x:Name="BtnPloufAPI" Content="API" HorizontalAlignment="Stretch"  FontSize="30" Click="BtnPloufAPI_Click"/>
+
+            </Grid>
+            <ScrollViewer>
+                <StackPanel x:Name="StkInfo" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+
+
+            </StackPanel>
+            </ScrollViewer>
+
+        </StackPanel>
+    </Grid>
+</Page>
